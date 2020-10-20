@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FoodiesApplication<foodies>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "edu.villanova.foodies.FoodiesApplication",
+            "projectName": "foodies",
+            "args": ""
+        }
+    ]
+}

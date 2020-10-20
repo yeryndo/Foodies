@@ -14,4 +14,5 @@ public class FoodiesApplication {
 
 	@Autowired
 	private RecipeRepository recipeRepository;
+
 }

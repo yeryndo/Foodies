@@ -14,25 +14,28 @@ public class Recipe {
     private int estimateTime;
     private String category;
     private String imageUrl;
-    private String description;
+    private String detail;
     // private String[] ingredients;
 
     public Recipe() {
     }
 
-    public Recipe(String name, String category, String imageUrl) {
+    public Recipe(String name, String category, String detail, String imageUrl) {
         this.name = name;
         this.category = category;
+        this.detail = detail;
         this.imageUrl = imageUrl;
     }
 
-    public Recipe(String name, int calories, int servingSize, int estimateTime, String imageUrl, String description) {
+    public Recipe(String name, int calories, int servingSize, int estimateTime, String category, String imageUrl,
+            String detail) {
         this.name = name;
         this.calories = calories;
         this.servingSize = servingSize;
         this.estimateTime = estimateTime;
+        this.category = category;
         this.imageUrl = imageUrl;
-        this.description = description;
+        this.detail = detail;
     }
 
     public String getName() {
@@ -91,12 +94,12 @@ public class Recipe {
         this.category = category;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     // public String[] getIngredients() {

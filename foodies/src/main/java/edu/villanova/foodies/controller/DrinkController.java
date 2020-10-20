@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.villanova.foodies.model.Drink;
+import edu.villanova.foodies.model.Recipe;
 import edu.villanova.foodies.repository.DrinkRepository;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -53,4 +54,10 @@ public class DrinkController {
         drinkRepository.deleteById(drinkId);
         return "Successfully deleted";
     }
+
+    // @GetMapping("/{category}")
+    // public List<Drink> getDrinkByCategory(@PathVariable String category) {
+    // return drinkRepository.findDrinkByCategory(category);
+    // }
+
 }

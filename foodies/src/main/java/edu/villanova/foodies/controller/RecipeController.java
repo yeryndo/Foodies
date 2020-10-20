@@ -21,7 +21,6 @@ import edu.villanova.foodies.repository.RecipeRepository;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("recipe")
 public class RecipeController {
 
     private final RecipeRepository recipeRepository;
@@ -41,7 +40,7 @@ public class RecipeController {
         return recipeRepository.findAll();
     }
 
-    @GetMapping("/{recipeId}")
+    @GetMapping("recipe/{recipeId}")
     public ResponseEntity<Recipe> getRecipe(@PathVariable String recipeId) {
         Recipe recipe = recipeRepository.findById(recipeId).get();
         if (recipe != null) {
@@ -50,19 +49,39 @@ public class RecipeController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND); // gives 500 error right now, and not 404
     }
 
-    @PostMapping(value = "/createRecipe")
+    @PostMapping(value = "recipe/createRecipe")
     public Recipe addNewRecipe(@RequestBody Recipe recipe) {
         return recipeRepository.save(recipe);
     }
 
-    @DeleteMapping(value = "/{recipeId}")
+    @DeleteMapping(value = "recipe/{recipeId}")
     public String deleteRecipe(@PathVariable String recipeId) {
         recipeRepository.deleteById(recipeId);
         return "Successfully deleted";
     }
 
-    @GetMapping("/pancakeBreakfast")
-    public List<Recipe> getPancakeRecipes() {
-        return recipeRepository.findRecipeByCategory("Pancake");
+    @GetMapping("/breakfast/{category}")
+    public List<Recipe> getRecipesByCategoryInBreakfast(@PathVariable String category) {
+        return recipeRepository.findRecipeByCategory(category);
+    }
+
+    @GetMapping("/lunch/{category}")
+    public List<Recipe> getRecipesByCategoryInLunch(@PathVariable String category) {
+        return recipeRepository.findRecipeByCategory(category);
+    }
+
+    @GetMapping("/dinner/{category}")
+    public List<Recipe> getRecipesByCategoryInDinner(@PathVariable String category) {
+        return recipeRepository.findRecipeByCategory(category);
+    }
+
+    @GetMapping("/dessert/{category}")
+    public List<Recipe> getRecipesByCategoryInDessert(@PathVariable String category) {
+        return recipeRepository.findRecipeByCategory(category);
+    }
+
+    @GetMapping("/dietary/{category}")
+    public List<Recipe> getRecipesByCategoryInDietary(@PathVariable String category) {
+        return recipeRepository.findRecipeByCategory(category);
     }
 }
