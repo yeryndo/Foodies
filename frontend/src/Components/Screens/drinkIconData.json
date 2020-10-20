@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "title": "Juice",
+      "imageSource": "../Images/iconDrink/juiceIcon.jpg",
+      "url": "/juice"
+    },
+    {
+      "id": 2,
+      "title": "Tea",
+      "imageSource": "../Images/iconDrink/TeaIcon.jpg",
+      "url": "/tea"
+    },
+    {
+      "id": 3,
+      "title": "Coffee",
+      "imageSource": "../Images/iconDrink/coffeeIcon.jpg",
+      "url": "/coffee"
+    },
+    {
+      "id": 4,
+      "title": "Smoothie",
+      "imageSource": "../Images/iconDrink/smoothieIcon.jpg",
+      "url": "/smoothie"
+    },
+    {
+      "id": 5,
+      "title": "Alcohol",
+      "imageSource": "../Images/iconDrink/alcoholIcon.jpg",
+      "url": "/alcohol"
+    }
+  ]

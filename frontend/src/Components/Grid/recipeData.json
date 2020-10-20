@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Fried Chicken Over Rice",
+    "text": "This is a savory fried chicken that is good for dinner or for holiday parties!",
+    "imageSource": "../Images/chicken.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Pizza",
+    "text": "This is a recipe for a nice pizza that you can eat for lunch or dinner. It has peppers and basil leaves. Leaves a clean taste!",
+    "imageSource": "../Images/pizza.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Shrimp Pasta",
+    "text": "An easy peasy pasta dish that’s simple, flavorful and incredibly hearty. And all you need is 20 min to whip this up!",
+    "imageSource": "../Images/pasta.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Steak",
+    "text": "Easy Steak Frites that will not disappoint any guest.",
+    "imageSource": "../Images/steak.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Buttermilk Pancakes",
+    "text": "Awesome buttermilk pancakes that are super easy and delicious for any breakfast or brunch!",
+    "imageSource": "../Images/pancakes.jpg"
+  }
+]

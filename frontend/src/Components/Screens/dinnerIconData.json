@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "title": "Chicken",
+      "imageSource": "../Images/iconDinner/chickenIcon.jpg",
+      "url": "/chickenDinner"
+    },
+    {
+      "id": 2,
+      "title": "Beef",
+      "imageSource": "../Images/iconDinner/beefIcon.jpg",
+      "url": "/beefDinner"
+    },
+    {
+      "id": 3,
+      "title": "Fish",
+      "imageSource": "../Images/iconDinner/fishIcon.jpg",
+      "url": "/fishDinner"
+    },
+    {
+      "id": 4,
+      "title": "Seafood",
+      "imageSource": "../Images/iconDinner/seafoodIcon.jpg",
+      "url": "/seafoodDinner"
+    },
+    {
+      "id": 5,
+      "title": "Grain",
+      "imageSource": "../Images/iconDinner/grainIcon.jpg",
+      "url": "/grainDinner"
+    },
+    {
+      "id": 6,
+      "title": "Pork",
+      "imageSource": "../Images/iconDinner/porkIcon.jpg",
+      "url": "/porkDinner"
+    },
+    {
+      "id": 7,
+      "title": "Lamb",
+      "imageSource": "../Images/iconDinner/lambIcon.jpg",
+      "url": "/lambDinner"
+    },
+    {
+      "id": 8,
+      "title": "Vegetable",
+      "imageSource": "../Images/iconDinner/vegetableIcon.jpg",
+      "url": "/vegetableDinner"
+    }
+  ]
