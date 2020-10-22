@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Additional Packages to Install on the command line:
+npm install react-bootstrap bootstrap
+
+npm install react-router-dom
+
+### Additional Packages to Install on VSCode:
+Java Extension Pack
+Spring Boot Extension Pack
+Lombok
+
+
 ## Available Scripts
 
 In the project directory, you can run:
