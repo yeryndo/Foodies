@@ -47,56 +47,56 @@ import CookieScreen from "../EntreeScreen/Dessert/CookiesScreen";
 const SwitchRouter = () => {
     return (
         <Switch>
-        <Route path = "/" exact component={HomeScreen} />
-        <Route exact path = "/breakfast" component={BreakfastScreen} />
-        <Route exact path = "/lunch" component={LunchScreen} />
-        <Route exact path = "/dinner" component={DinnerScreen} />
-        <Route exact path = '/dessert' component = {DessertScreen} />
-        <Route exact path = '/dietary' component = {DietaryfastScreen} />
-        <Route exact path = '/drink' component = {DrinkScreen} />
+          <Route path = "/" exact component={HomeScreen} />
+          <Route exact path = "/breakfast" component={BreakfastScreen} />
+          <Route exact path = "/lunch" component={LunchScreen} />
+          <Route exact path = "/dinner" component={DinnerScreen} />
+          <Route exact path = '/dessert' component = {DessertScreen} />
+          <Route exact path = '/dietary' component = {DietaryfastScreen} />
+          <Route exact path = '/drink' component = {DrinkScreen} />
 
-        <Route path = "/lunch/chicken" component={ChickenLunchScreen} />
-        <Route path = "/lunch/beef" component={BeefLunchScreen} />
-        <Route path = "/lunch/fish" component={FishLunchScreen} />
-        <Route path = "/lunch/lamb" component={LambLunchScreen} />
-        <Route path = "/lunch/seafood" component={SeafoodLunchScreen} />
-        <Route path = "/lunch/grain" component={GrainLunchScreen} />
-        <Route path = "/lunch/pork" component={PorkLunchScreen} />
-        <Route path = "/lunch/vegetable" component={VegetableLunchScreen} />
+          <Route path = "/lunch/chicken" component={ChickenLunchScreen} />
+          <Route path = "/lunch/beef" component={BeefLunchScreen} />
+          <Route path = "/lunch/fish" component={FishLunchScreen} />
+          <Route path = "/lunch/lamb" component={LambLunchScreen} />
+          <Route path = "/lunch/seafood" component={SeafoodLunchScreen} />
+          <Route path = "/lunch/grain" component={GrainLunchScreen} />
+          <Route path = "/lunch/pork" component={PorkLunchScreen} />
+          <Route path = "/lunch/vegetable" component={VegetableLunchScreen} />
 
-        <Route path = "/breakfast/eggs" component = {EggBreakfastScreen } />
-        <Route path = "/breakfast/pancake" component = {PancakeBreakfastScreen} />
-        <Route path = "/breakfast/bread" component = {BreadBreakfastScreen} />
-        <Route path = "/breakfast/oatmeal" component = {OatmealBreakfastScreen} />
-        <Route path = "/breakfast/pastry" component = {PastryBreakfastScreen} />
-        <Route path = "/breakfast/fruit" component = {FruitBreakfastScreen} />
-        <Route path = "/breakfast/yogurt" component = {YogurtBreakfastScreen} />
+          <Route path = "/breakfast/eggs" component = {EggBreakfastScreen } />
+          <Route path = "/breakfast/pancake" component = {PancakeBreakfastScreen} />
+          <Route path = "/breakfast/bread" component = {BreadBreakfastScreen} />
+          <Route path = "/breakfast/oatmeal" component = {OatmealBreakfastScreen} />
+          <Route path = "/breakfast/pastry" component = {PastryBreakfastScreen} />
+          <Route path = "/breakfast/fruit" component = {FruitBreakfastScreen} />
+          <Route path = "/breakfast/yogurt" component = {YogurtBreakfastScreen} />
 
-        <Route path = "/dinner/beef" component = {BeefDinnerScreen} />
-        <Route path = "/dinner/chicken" component = {ChickenDinnerScreen} />
-        <Route path = "/dinner/fish" component = {FishDinnerScreen} />
-        <Route path = "/dinner/grain" component = {GrainDinnerScreen} />
-        <Route path = "/dinner/lamb" component ={LambDinnerScreen} />
-        <Route path = "/dinner/pork" component = {PorkDinnerScreen} />
-        <Route path = "/dinner/seafood" component = {SeafoodDinnerScreen} />
-        <Route path = "/dinner/vegetable" component = {VegetableDinnerScreen} />
+          <Route path = "/dinner/beef" component = {BeefDinnerScreen} />
+          <Route path = "/dinner/chicken" component = {ChickenDinnerScreen} />
+          <Route path = "/dinner/fish" component = {FishDinnerScreen} />
+          <Route path = "/dinner/grain" component = {GrainDinnerScreen} />
+          <Route path = "/dinner/lamb" component ={LambDinnerScreen} />
+          <Route path = "/dinner/pork" component = {PorkDinnerScreen} />
+          <Route path = "/dinner/seafood" component = {SeafoodDinnerScreen} />
+          <Route path = "/dinner/vegetable" component = {VegetableDinnerScreen} />
 
-        <Route path = "/dietary/nondairy" component = {NonDairyScreen} />
-        <Route path = "/dietary/glutenfree" component = {GlutonScreen} />
+          <Route path = "/dietary/nondairy" component = {NonDairyScreen} />
+          <Route path = "/dietary/glutenfree" component = {GlutonScreen} />
 
-        <Route path = "/drink/coffee" component = {CoffeeScreen} />
-        <Route path = "/drink/juice" component = {JuiceScreen} />
-        <Route path = "/drink/tea" component = {TeaScreen} />
-        <Route path = "/drink/smoothie" component = {SmoothieScreen} />
-        <Route path = "/drink/alcohol" component = {AlcoholScreen} />
+          <Route path = "/drink/coffee" component = {CoffeeScreen} />
+          <Route path = "/drink/juice" component = {JuiceScreen} />
+          <Route path = "/drink/tea" component = {TeaScreen} />
+          <Route path = "/drink/smoothie" component = {SmoothieScreen} />
+          <Route path = "/drink/alcohol" component = {AlcoholScreen} />
 
-        <Route path = "/dessert/cake" component = {CakeScreen} />
-        <Route path = "/dessert/brownies" component = {BrowniesScreen} />
-        <Route path = "/dessert/pie" component = {PieScreen} />
-        <Route path = "/dessert/icecream" component = {IcecreamScreen} />
-        <Route path = "/dessert/cookies" component = {CookieScreen} />
-      </Switch>  
+          <Route path = "/dessert/cake" component = {CakeScreen} />
+          <Route path = "/dessert/brownies" component = {BrowniesScreen} />
+          <Route path = "/dessert/pie" component = {PieScreen} />
+          <Route path = "/dessert/icecream" component = {IcecreamScreen} />
+          <Route path = "/dessert/cookies" component = {CookieScreen} />
+        </Switch>  
     );
   };
-  export default SwitchRouter;
+export default SwitchRouter;
   
