@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Image, Container, Row, Col } from "react-bootstrap";
+import { Image, Container, Row} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import IconData from "./dessertIconData.json";
 import "./screenDisplay.css";
