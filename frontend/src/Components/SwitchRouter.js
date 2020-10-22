@@ -5,14 +5,10 @@ import HomeScreen from "./Screens/HomeScreen";
 import BreakfastScreen from "./Screens/BreakfastScreen";
 import LunchScreen from "./Screens/LunchScreen";
 import DinnerScreen from "./Screens/DinnerScreen";
-import ChickenLunchScreen from "../EntreeScreen/Lunch/Chicken/ChickenLunchScreen";
-import BeefLunchScreen from "../EntreeScreen/Lunch/Beef/BeefLunchScreen";
-import FishLunchScreen from "../EntreeScreen/Lunch/FishLunchScreen";
-import LambLunchScreen from "../EntreeScreen/Lunch/LambLunchScreen";
-import SeafoodLunchScreen from "../EntreeScreen/Lunch/SeafoodLunchScreen";
-import GrainLunchScreen from "../EntreeScreen/Lunch/GrainLunchScreen";
-import PorkLunchScreen from "../EntreeScreen/Lunch/PorkLunchScreen";
-import VegetableLunchScreen from "../EntreeScreen/Lunch/VegetableLunchScreen";
+import DietaryfastScreen from "./Screens/DietaryScreen";
+import DrinkScreen from "./Screens/DrinkScreen";
+import DessertScreen from "./Screens/DessertScreen";
+
 import EggBreakfastScreen from "../EntreeScreen/Breakfast/EggBreakfastScreen"
 import OatmealBreakfastScreen from "../EntreeScreen/Breakfast/OatmealBreakfastScreen";
 import PancakeBreakfastScreen from "../EntreeScreen/Breakfast/PancakeBreakfastScreen";
@@ -20,6 +16,16 @@ import BreadBreakfastScreen from "../EntreeScreen/Breakfast/BreadsBreakfastScree
 import PastryBreakfastScreen from "../EntreeScreen/Breakfast/PastryBreakfastScreen";
 import FruitBreakfastScreen from "../EntreeScreen/Breakfast/FruitBreakfastScreen";
 import YogurtBreakfastScreen from "../EntreeScreen/Breakfast/YogurtBreakfastScreen";
+
+import ChickenLunchScreen from "../EntreeScreen/Lunch/ChickenLunchScreen";
+import BeefLunchScreen from "../EntreeScreen/Lunch/BeefLunchScreen";
+import FishLunchScreen from "../EntreeScreen/Lunch/FishLunchScreen";
+import LambLunchScreen from "../EntreeScreen/Lunch/LambLunchScreen";
+import SeafoodLunchScreen from "../EntreeScreen/Lunch/SeafoodLunchScreen";
+import GrainLunchScreen from "../EntreeScreen/Lunch/GrainLunchScreen";
+import PorkLunchScreen from "../EntreeScreen/Lunch/PorkLunchScreen";
+import VegetableLunchScreen from "../EntreeScreen/Lunch/VegetableLunchScreen";
+
 import BeefDinnerScreen from "../EntreeScreen/Dinner/BeefDinnerScreen";
 import ChickenDinnerScreen from "../EntreeScreen/Dinner/ChickenDinnerScreen";
 import FishDinnerScreen from "../EntreeScreen/Dinner/FishDinnerScreen";
@@ -28,16 +34,16 @@ import LambDinnerScreen from "../EntreeScreen/Dinner/LambDinnerScreen";
 import PorkDinnerScreen from "../EntreeScreen/Dinner/PorkDinnerScreen";
 import SeafoodDinnerScreen from "../EntreeScreen/Dinner/SeafoodDinnerScreen";
 import VegetableDinnerScreen from "../EntreeScreen/Dinner/VegetableDinnerScreen";
-import DessertScreen from "./Screens/DessertScreen";
-import DietaryfastScreen from "./Screens/DietaryScreen";
+
 import NonDairyScreen from "../EntreeScreen/Dietary/NonDairyScreen";
 import GlutenScreen from "../EntreeScreen/Dietary/GlutenFreeScreen";
+
 import CoffeeScreen from "../EntreeScreen/Drink/CoffeeScreen";
-import DrinkScreen from "./Screens/DrinkScreen";
 import JuiceScreen from "../EntreeScreen/Drink/JuiceScreen";
 import TeaScreen from "../EntreeScreen/Drink/TeaScreen";
 import SmoothieScreen from "../EntreeScreen/Drink/Smoothie";
 import AlcoholScreen from "../EntreeScreen/Drink/AlcoholScreen";
+
 import CakeScreen from "../EntreeScreen/Dessert/CakeScreen";
 import BrowniesScreen from "../EntreeScreen/Dessert/BrowniesScreen";
 import PieScreen from "../EntreeScreen/Dessert/PieScreen";
