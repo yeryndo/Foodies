@@ -1,11 +1,11 @@
 import React from "react";
 
-function GlutonScreen() {
+function GlutenScreen() {
   return (
     <div>
-      <h2>List of Gluten free Recipes</h2>
+      <h2 style={{ padding: 30 }}>List of Gluten Free Recipes</h2>
     </div>
   );
 }
 
-export default GlutonScreen;
+export default GlutenScreen;

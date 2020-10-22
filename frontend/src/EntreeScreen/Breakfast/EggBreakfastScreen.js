@@ -4,7 +4,7 @@ import RecipeComponent from "../../Components/RecipeComponent";
 function EggBreakfastScreen() {
   return (
     <div>
-      <h2>List of Egg Recipes for Breakfast</h2>
+      <h2 style={{ padding: 30 }}>List of Egg Recipes for Breakfast</h2>
       <RecipeComponent meal ="breakfast" category="eggs"/>
     </div>
   );

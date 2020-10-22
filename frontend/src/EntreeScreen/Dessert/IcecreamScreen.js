@@ -3,7 +3,7 @@ import React from "react";
 function IcecreamScreen() {
   return (
     <div>
-      <h2>List of Ice Cream Recipes </h2>
+      <h2 style={{ padding: 30 }}>List of Ice Cream Recipes for Dessert</h2>
     </div>
   );
 }

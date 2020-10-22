@@ -3,7 +3,7 @@ import React from "react";
 function CakeScreen() {
   return (
     <div>
-      <h2>List of Cake Recipes </h2>
+      <h2 style={{ padding: 30 }}>List of Cake Recipes for Dessert</h2>
     </div>
   );
 }

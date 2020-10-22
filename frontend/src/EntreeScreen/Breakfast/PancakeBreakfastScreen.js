@@ -3,7 +3,7 @@ import RecipeComponent from "../../Components/RecipeComponent";
 function PancakeBreakfastScreen() {
   return (
     <div>
-      <h2>List of Pancake and Waffle Recipes for Breakfast</h2>
+      <h2 style={{ padding: 30 }}>List of Pancake and Waffle Recipes for Breakfast</h2>
       <RecipeComponent meal ="breakfast" category="pancake"/>
     </div>
     

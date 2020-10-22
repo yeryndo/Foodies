@@ -3,7 +3,7 @@ import React from "react";
 function BeefDinnerScreen() {
   return (
     <div>
-      <h2>List of Beef Recipes for Dinner</h2>
+      <h2 style={{ padding: 30 }}>List of Beef Recipes for Dinner</h2>
     </div>
   );
 }

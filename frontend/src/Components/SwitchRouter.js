@@ -31,7 +31,7 @@ import VegetableDinnerScreen from "../EntreeScreen/Dinner/VegetableDinnerScreen"
 import DessertScreen from "./Screens/DessertScreen";
 import DietaryfastScreen from "./Screens/DietaryScreen";
 import NonDairyScreen from "../EntreeScreen/Dietary/NonDairyScreen";
-import GlutonScreen from "../EntreeScreen/Dietary/GlutenFreeScreen";
+import GlutenScreen from "../EntreeScreen/Dietary/GlutenFreeScreen";
 import CoffeeScreen from "../EntreeScreen/Drink/CoffeeScreen";
 import DrinkScreen from "./Screens/DrinkScreen";
 import JuiceScreen from "../EntreeScreen/Drink/JuiceScreen";
@@ -82,7 +82,7 @@ const SwitchRouter = () => {
           <Route path = "/dinner/vegetable" component = {VegetableDinnerScreen} />
 
           <Route path = "/dietary/nondairy" component = {NonDairyScreen} />
-          <Route path = "/dietary/glutenfree" component = {GlutonScreen} />
+          <Route path = "/dietary/glutenfree" component = {GlutenScreen} />
 
           <Route path = "/drink/coffee" component = {CoffeeScreen} />
           <Route path = "/drink/juice" component = {JuiceScreen} />
