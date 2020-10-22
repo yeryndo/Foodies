@@ -3,48 +3,48 @@
       "id": 1,
       "title": "Chicken",
       "imageSource": "../Images/Lunch/iconLunch/chickenIcon.jpg",
-      "url": "/chickenLunch"
+      "url": "lunch/chicken"
     },
     {
       "id": 2,
       "title": "Beef",
       "imageSource": "../Images/Lunch/iconLunch/beefIcon.jpg",
-      "url": "/beefLunch"
+      "url": "lunch/beef"
     },
     {
       "id": 3,
       "title": "Fish",
       "imageSource": "../Images/Lunch/iconLunch/fishIcon.jpg",
-      "url": "/fishLunch"
+      "url": "lunch/fish"
     },
     {
       "id": 4,
       "title": "Seafood",
       "imageSource": "../Images/Lunch/iconLunch/seafoodIcon.jpg",
-      "url": "/seafoodLunch"
+      "url": "lunch/seafood"
     },
     {
       "id": 5,
       "title": "Grain",
       "imageSource": "../Images/Lunch/iconLunch/grainIcon.jpg",
-      "url": "/grainLunch"
+      "url": "lunch/grain"
     },
     {
       "id": 6,
       "title": "Pork",
       "imageSource": "../Images/Lunch/iconLunch/porkIcon.jpg",
-      "url": "/porkLunch"
+      "url": "lunch/pork"
     },
     {
       "id": 7,
       "title": "Lamb",
       "imageSource": "../Images/Lunch/iconLunch/lambIcon.jpg",
-      "url": "/lambLunch"
+      "url": "lunch/lamb"
     },
     {
       "id": 8,
       "title": "Vegetable",
       "imageSource": "../Images/Lunch/iconLunch/vegetableIcon.jpg",
-      "url": "/vegetableLunch"
+      "url": "lunch/vegetable"
     }
   ]

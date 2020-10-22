@@ -2,7 +2,7 @@ import React from "react";
 
 import { Image, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import IconData from "./iconData.json";
+import IconData from "./lunchIconData.json";
 import "./screenDisplay.css";
 function LunchScreen() {
   return (
