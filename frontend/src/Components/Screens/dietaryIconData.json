@@ -1,14 +1,14 @@
 [
-    {
-      "id": 1,
-      "title": "Non-Dairy",
-      "imageSource": "../Images/iconDietary/dairyIcon.jpg",
-      "url": "/nondairy"
-    },
-    {
-      "id": 2,
-      "title": "Gluten Free",
-      "imageSource": "../Images/iconDietary/glutenIcon.jpg",
-      "url": "/glutenfree"
-    }
+  {
+    "id": 1,
+    "title": "Non-Dairy",
+    "imageSource": "../Images/iconDietary/dairyIcon.jpg",
+    "url": "dietary/nondairy"
+  },
+  {
+    "id": 2,
+    "title": "Gluten Free",
+    "imageSource": "../Images/iconDietary/glutenIcon.jpg",
+    "url": "dietary/glutenfree"
+  }
 ]

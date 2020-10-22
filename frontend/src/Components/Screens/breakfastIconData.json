@@ -3,44 +3,42 @@
       "id": 1,
       "title": "Eggs",
       "imageSource": "../Images/iconBreakfast/eggIcon.jpg",
-      "url": "/eggsBreakfast"
+      "url": "breakfast/eggs"
     },
     {
       "id": 2,
       "title": "Pancakes",
       "imageSource": "../Images/iconBreakfast/pancakeIcon.jpg",
-      "url": "/pancakeBreakfast"
+      "url": "breakfast/pancake"
     },
     {
         "id": 3,
         "title": "Breads",
         "imageSource": "../Images/iconBreakfast/breadIcon.jpg",
-        "url": "/breadBreakfast"
+        "url": "breakfast/bread"
       },
       {
         "id": 4,
         "title": "Pastries",
         "imageSource": "../Images/iconBreakfast/pastryIcon.jpg",
-        "url": "/pastryBreakfast"
+        "url": "breakfast/pastry"
       },
       {
         "id": 5,
         "title": "Oatmeal",
         "imageSource": "../Images/iconBreakfast/oatmealIcon.jpg",
-        "url": "/oatmealBreakfast"
+        "url": "breakfast/oatmeal"
       },
       {
         "id": 6,
         "title": "Fruit",
         "imageSource": "../Images/iconBreakfast/fruitIcon.jpg",
-        "url": "/fruitBreakfast"
+        "url": "breakfast/fruit"
       },
       {
         "id": 7,
         "title": "Yogurt",
         "imageSource": "../Images/iconBreakfast/yogurtIcon.jpg",
-        "url": "/yogurtBreakfast"
+        "url": "breakfast/yogurt"
       }
-
-
 ]

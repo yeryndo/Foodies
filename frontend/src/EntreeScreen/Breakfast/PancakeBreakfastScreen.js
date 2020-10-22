@@ -4,7 +4,7 @@ function PancakeBreakfastScreen() {
   return (
     <div>
       <h2>List of Pancake and Waffle Recipes for Breakfast</h2>
-      <RecipeComponent />
+      <RecipeComponent meal ="breakfast" category="pancake"/>
     </div>
     
   );

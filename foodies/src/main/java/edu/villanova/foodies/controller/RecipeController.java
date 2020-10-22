@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +21,6 @@ import edu.villanova.foodies.repository.RecipeRepository;
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class RecipeController {
-
     private final RecipeRepository recipeRepository;
 
     public RecipeController(RecipeRepository recipeRepository) {
@@ -60,28 +58,8 @@ public class RecipeController {
         return "Successfully deleted";
     }
 
-    @GetMapping("/breakfast/{category}")
-    public List<Recipe> getRecipesByCategoryInBreakfast(@PathVariable String category) {
-        return recipeRepository.findRecipeByCategory(category);
-    }
-
-    @GetMapping("/lunch/{category}")
-    public List<Recipe> getRecipesByCategoryInLunch(@PathVariable String category) {
-        return recipeRepository.findRecipeByCategory(category);
-    }
-
-    @GetMapping("/dinner/{category}")
-    public List<Recipe> getRecipesByCategoryInDinner(@PathVariable String category) {
-        return recipeRepository.findRecipeByCategory(category);
-    }
-
-    @GetMapping("/dessert/{category}")
-    public List<Recipe> getRecipesByCategoryInDessert(@PathVariable String category) {
-        return recipeRepository.findRecipeByCategory(category);
-    }
-
-    @GetMapping("/dietary/{category}")
-    public List<Recipe> getRecipesByCategoryInDietary(@PathVariable String category) {
-        return recipeRepository.findRecipeByCategory(category);
+    @GetMapping("/{meal}/{category}")
+    public List<Recipe> getRecipesByCategoryInBreakfast(@PathVariable String category, @PathVariable String meal) {
+        return recipeRepository.findRecipeByMealAndCategory(meal, category);
     }
 }

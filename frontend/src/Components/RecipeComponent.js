@@ -6,19 +6,21 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './Grid/recipeDisplay.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import PancakeBreakfastService from '../Services/PancakeBreakfastService';
+import RecipeService from '../Services/RecipeService';
 
 class RecipeComponent extends React.Component {
     
     constructor(props){
         super(props)
         this.state = {            
-            recipes:[]
+            recipes:[],
+            meal: this.props.meal,
+            category: this.props.category
         }
     }
 
     componentDidMount(){
-        PancakeBreakfastService.getRecipes().then((response) => {
+        RecipeService.getRecipes(this.state.meal, this.state.category).then((response) => {
             this.setState({ recipes: response.data})
         });
     }

@@ -9,27 +9,31 @@ public class Recipe {
     private String id;
 
     private String name;
+    private String meal;
     private int calories;
     private int servingSize;
     private int estimateTime;
     private String category;
     private String imageUrl;
     private String detail;
-    // private String[] ingredients;
+    private String[] ingredients;
 
     public Recipe() {
     }
 
-    public Recipe(String name, String category, String detail, String imageUrl) {
+    public Recipe(String name, String meal, String category, String detail, String imageUrl, String[] ingredients) {
         this.name = name;
+        this.meal = meal;
         this.category = category;
         this.detail = detail;
         this.imageUrl = imageUrl;
+        this.ingredients = ingredients;
     }
 
-    public Recipe(String name, int calories, int servingSize, int estimateTime, String category, String imageUrl,
-            String detail) {
+    public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
+            String imageUrl, String detail) {
         this.name = name;
+        this.meal = meal;
         this.calories = calories;
         this.servingSize = servingSize;
         this.estimateTime = estimateTime;
@@ -102,11 +106,19 @@ public class Recipe {
         this.detail = detail;
     }
 
-    // public String[] getIngredients() {
-    // return ingredients;
-    // }
-    //
-    // public void setIngredients(String[] ingredients) {
-    // this.ingredients = ingredients;
-    // }
+    public String getMeal() {
+        return meal;
+    }
+
+    public void setMeal(String meal) {
+        this.meal = meal;
+    }
+
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
+    }
 }

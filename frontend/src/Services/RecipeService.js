@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const RECIPES_REST_API_URL = 'http://localhost:8000/recipe/allRecipes'
-
 class RecipeService {
-    getRecipes() {
-        return axios.get(RECIPES_REST_API_URL);
+    getRecipes(typeOfMeal, typeOfCategory) {
+        var meal = typeOfMeal
+        var category = typeOfCategory
+        return axios.get(`http://localhost:8000/${meal}/${category}`);
     }
 }
 
