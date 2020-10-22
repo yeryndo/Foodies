@@ -18,13 +18,13 @@ import OatmealBreakfastScreen from "../EntreeScreen/Breakfast/OatmealBreakfastSc
 import PancakeBreakfastScreen from "../EntreeScreen/Breakfast/PancakeBreakfastScreen";
 import BreadBreakfastScreen from "../EntreeScreen/Breakfast/BreadsBreakfastScreen";
 import PastryBreakfastScreen from "../EntreeScreen/Breakfast/PastryBreakfastScreen";
-import FruitBreakfastScreen from "../EntreeScreen/Breakfast/FruiteBreakfastScreen";
+import FruitBreakfastScreen from "../EntreeScreen/Breakfast/FruitBreakfastScreen";
 import YogurtBreakfastScreen from "../EntreeScreen/Breakfast/YogurtBreakfastScreen";
 import BeefDinnerScreen from "../EntreeScreen/Dinner/BeefDinnerScreen";
 import ChickenDinnerScreen from "../EntreeScreen/Dinner/ChickenDinnerScreen";
 import FishDinnerScreen from "../EntreeScreen/Dinner/FishDinnerScreen";
 import GrainDinnerScreen from "../EntreeScreen/Dinner/GrainDinnerScreen";
-import LambDinnerScreen from "../EntreeScreen/Dinner/LamDinnerScreen";
+import LambDinnerScreen from "../EntreeScreen/Dinner/LambDinnerScreen";
 import PorkDinnerScreen from "../EntreeScreen/Dinner/PorkDinnerScreen";
 import SeafoodDinnerScreen from "../EntreeScreen/Dinner/SeafoodDinnerScreen";
 import VegetableDinnerScreen from "../EntreeScreen/Dinner/VegetableDinnerScreen";
