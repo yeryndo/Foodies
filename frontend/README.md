@@ -5,6 +5,12 @@ npm install react-bootstrap bootstrap
 
 npm install react-router-dom
 
+npm install @material-ui/core
+
+npm install @material-ui/icons
+
+npm install --save clsx
+
 ### Additional Packages to Install on VSCode:
 Java Extension Pack
 Spring Boot Extension Pack
