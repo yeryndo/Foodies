@@ -104,8 +104,8 @@ const useStyles = makeStyles((theme) => ({
                             </CardActions>
                             <Collapse in={expanded} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    <Typography paragraph>{recipe.ingredients}</Typography>
-                                    <Typography paragraph>This is a test for the new recipe card</Typography>              
+                                    <Typography paragraph>Instructions:</Typography>
+                                    <Typography paragraph>{recipe.instructions}</Typography>              
                                 </CardContent>
                             </Collapse>
                         </Card>

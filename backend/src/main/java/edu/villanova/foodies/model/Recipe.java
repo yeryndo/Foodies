@@ -31,7 +31,7 @@ public class Recipe {
     }
 
     public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
-            String imageUrl, String detail) {
+            String imageUrl, String detail, String instructions) {
         this.name = name;
         this.meal = meal;
         this.calories = calories;
@@ -40,6 +40,7 @@ public class Recipe {
         this.category = category;
         this.imageUrl = imageUrl;
         this.detail = detail;
+        this.instructions = instructions;
     }
 
     public String getName() {
