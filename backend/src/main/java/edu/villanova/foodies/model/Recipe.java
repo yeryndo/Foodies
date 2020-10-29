@@ -16,18 +16,18 @@ public class Recipe {
     private String category;
     private String imageUrl;
     private String detail;
-    private String[] ingredients;
+    private String instructions;
 
     public Recipe() {
     }
 
-    public Recipe(String name, String meal, String category, String detail, String imageUrl, String[] ingredients) {
+    public Recipe(String name, String meal, String category, String detail, String imageUrl, String[] ingredients, String instructions) {
         this.name = name;
         this.meal = meal;
         this.category = category;
         this.detail = detail;
         this.imageUrl = imageUrl;
-        this.ingredients = ingredients;
+        this.instructions = instructions;
     }
 
     public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
@@ -114,11 +114,11 @@ public class Recipe {
         this.meal = meal;
     }
 
-    public String[] getIngredients() {
-        return ingredients;
+    public String getInstructions() {
+        return instructions;
     }
 
-    public void setIngredients(String[] ingredients) {
-        this.ingredients = ingredients;
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
     }
 }
