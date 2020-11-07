@@ -17,6 +17,7 @@ public class Recipe {
     private String imageUrl;
     private String detail;
     private String instructions;
+    private String[] ingredients;
 
     public Recipe() {
     }
@@ -28,6 +29,7 @@ public class Recipe {
         this.detail = detail;
         this.imageUrl = imageUrl;
         this.instructions = instructions;
+        this.ingredients = ingredients;
     }
 
     public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
