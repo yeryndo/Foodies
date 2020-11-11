@@ -4,17 +4,13 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   width: 100%;
-  height: 55px;
+  height: 77px;
   border-bottom: 2px solid #f1f1f1;
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   .logo {
-    margin-top: 15px;
-  }
-
-  .body {
-    background-color: #627fe7;
+    margin-left: 45px;
   }
 `;
 
@@ -22,7 +18,7 @@ const Navbar = () => {
   return (
     <Nav>
       <div className="body">
-        <h2 className="logo">Foodies</h2>
+        <h2 className="logo"><img src={require("../../Images/logo.png")} width="140" alt="Foodies" /> </h2>
       </div>
       <Burger />
     </Nav>

@@ -72,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
                                 </IconButton>
                                 }
                                 title={recipe.name}
-                                // subheader="October 22, 2020" {date}
                             />
                             <CardMedia 
                                 className={classes.media}
@@ -85,12 +84,6 @@ const useStyles = makeStyles((theme) => ({
                                 </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                                {/* <IconButton aria-label="add to favorites">
-                                    <FavoriteIcon />
-                                </IconButton>
-                                <IconButton aria-label="share">
-                                    <ShareIcon />
-                                </IconButton> */}
                                 <IconButton
                                     className={clsx(classes.expand, {
                                         [classes.expandOpen]: expanded,
