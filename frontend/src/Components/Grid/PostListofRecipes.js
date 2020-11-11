@@ -27,7 +27,7 @@ class PostListofRecipes extends Component {
                                                     </Card.Text>                        
                                             </Card.Body>
                                             <Card.Footer>
-                                                <small className="text-muted">Last updated 3 mins ago</small>
+                                                {/* o;;; */}
                                             </Card.Footer>
                                         </Card>         
                                     </CardDeck>

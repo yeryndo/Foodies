@@ -3,8 +3,6 @@ package edu.villanova.foodies.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,7 +32,6 @@ public class RecipeController {
 
     @GetMapping("/allRecipes")
     public List<Recipe> getAllRecipes() {
-        // LOG.info("Getting all recipes.");
         return recipeRepository.findAll();
     }
 
@@ -48,7 +45,7 @@ public class RecipeController {
     }
 
     @PostMapping(value = "recipe/createRecipe")
-    public Recipe addNewRecipe(@RequestBody Recipe recipe) {
+    public Recipe addNewRecipe(@PathVariable Recipe recipe) {
         return recipeRepository.save(recipe);
     }
 
