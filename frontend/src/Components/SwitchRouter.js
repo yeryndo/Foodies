@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import HomeScreen from "./Screens/HomeScreen";
+import SearchScreen from "./SearchScreen";
+
 import BreakfastScreen from "./Screens/BreakfastScreen";
 import LunchScreen from "./Screens/LunchScreen";
 import DinnerScreen from "./Screens/DinnerScreen";
@@ -54,6 +56,8 @@ const SwitchRouter = () => {
     return (
         <Switch>
           <Route path = "/" exact component={HomeScreen} />
+          <Route exact path = "/search" component = {SearchScreen} />
+
           <Route exact path = "/breakfast" component={BreakfastScreen} />
           <Route exact path = "/lunch" component={LunchScreen} />
           <Route exact path = "/dinner" component={DinnerScreen} />

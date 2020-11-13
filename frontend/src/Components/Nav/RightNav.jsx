@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link,Switch,Route } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -35,6 +35,9 @@ const RightNav = ({ open }) => {
     <Ul open={open}>
       <Link style={navStyle} to="/">
         <li>Home</li>
+      </Link>
+      <Link style={navStyle} to="/search">
+        <li>Search</li>
       </Link>
       <Link style={navStyle} to="/breakfast">
         <li>Breakfast and Brunch</li>

@@ -1,6 +1,6 @@
-import React from "react";
-import Burger from "./Burger";
-import styled from "styled-components";
+import React from 'react';
+import Burger from './Burger';
+import styled from 'styled-components';
 
 const Nav = styled.nav`
   width: 100%;
