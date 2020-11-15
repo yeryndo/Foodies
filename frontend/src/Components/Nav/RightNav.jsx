@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Ul = styled.ul`
   list-style: none;
   display: flex;

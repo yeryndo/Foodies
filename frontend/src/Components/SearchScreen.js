@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Checkbox from 'react-checkbox-component';
 import axios from 'axios';
 
 class Search extends Component {
