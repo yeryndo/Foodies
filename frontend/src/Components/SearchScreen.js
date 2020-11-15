@@ -13,6 +13,10 @@ class Search extends Component {
         ketchup: false
     };
 
+    componentDidMount = () => {
+        this.getSelected();
+    }
+
     //React checkboxes onChange methods
     onChangeChicken = () => {
         this.setState(initialState => ({
@@ -106,7 +110,7 @@ class Search extends Component {
                     <div className = "form-group">
                         <button className = "btn btn-success">Save</button>                 
                     </div>
-                </form>                
+                </form>             
             </div>
         )
     }
