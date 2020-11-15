@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Search extends Component {
@@ -66,9 +67,14 @@ class Search extends Component {
             checkbox: checkArray.toString()
         };
 
-        axios.post('http://localhost:4000/api/checkbox-save', checkData)
+        var config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        };
+
+        axios.post('http://localhost:8000/all/', checkData, config, { crossdomain: true })
             .then((res) => {
                 console.log(res.data)
+                
             }).catch((error) => {
                 console.log(error)
             });

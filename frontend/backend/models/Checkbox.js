@@ -6,7 +6,7 @@ let checkboxModel = new Schema({
         type: String
     },
 }, {
-    collection: 'checkboxes'
+    collection: 'recipes'
     });
 
 module.exports = mongoose.model('CheckboxModel', checkboxModel);

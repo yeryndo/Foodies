@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.villanova.foodies.model.Recipe;
 import edu.villanova.foodies.repository.RecipeRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost")
 @RestController
 public class RecipeController {
     private final RecipeRepository recipeRepository;
@@ -26,13 +26,19 @@ public class RecipeController {
 
     @GetMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
     public String index() {
-        //db.recipe.aggregate([{$sample: {size: 10}}]);
         return "This is the Home Page for recipes";
     }
 
     @GetMapping("/allRecipes")
     public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
+    }
+
+    //only for testing
+    
+    @GetMapping("/all")
+    public String getStringArray() {
+        return "Hello";
     }
 
     @GetMapping("recipe/{recipeId}")

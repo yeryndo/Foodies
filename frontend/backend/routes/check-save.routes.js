@@ -4,7 +4,7 @@ let mongoose = require('mongoose'),
 
 let check = require('../models/Checkbox');
 
-checkboxRouter.route('/checkbox-save').post((req, res, next) => {
+checkboxRouter.route('/string').post((req, res, next) => {
     check.create(req.body, (error, data) => {
         if (error) {
             return next(error)

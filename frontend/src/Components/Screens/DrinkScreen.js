@@ -9,9 +9,9 @@ function DrinkScreen() {
     <div>
       <Container fluid>
         <Row className="background">
-          {IconData.map((iconDetail) => {
+          {IconData.map((iconDetail, index) => {
             return (
-              <div>
+              <div key={index}>
                 <Link to={iconDetail.url}>
                   <Image
                     src={iconDetail.imageSource}

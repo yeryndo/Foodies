@@ -33,7 +33,7 @@ public class Recipe {
     }
 
     public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
-            String imageUrl, String detail, String instructions) {
+            String imageUrl, String detail, String instructions, String[] ingredients) {
         this.name = name;
         this.meal = meal;
         this.calories = calories;
@@ -43,6 +43,7 @@ public class Recipe {
         this.imageUrl = imageUrl;
         this.detail = detail;
         this.instructions = instructions;
+        this.ingredients = ingredients;
     }
 
     public String getName() {
@@ -123,5 +124,13 @@ public class Recipe {
 
     public void setInstructions(String instructions) {
         this.instructions = instructions;
+    }
+
+    public String[] getIngredients(String[] ingredients){
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients){
+        this.ingredients = ingredients;
     }
 }
