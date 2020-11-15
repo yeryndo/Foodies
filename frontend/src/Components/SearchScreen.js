@@ -11,7 +11,7 @@ class Search extends Component {
         chicken: false,
         beef: false,
         rice: false,
-        egg: false,
+        eggs: false,
         carrot: false,
         onion: false,
         ketchup: false,
@@ -34,9 +34,9 @@ class Search extends Component {
             rice: !initialState.rice,
         }));
     }
-    onChangeEgg = () => {
+    onChangeEggs = () => {
         this.setState(initialState => ({
-            egg: !initialState.egg,
+            eggs: !initialState.eggs,
         }));
     }
     onChangeCarrot = () => {
@@ -76,10 +76,12 @@ class Search extends Component {
         }
 
         let checkData = {
-            ingredients: checkArray.toString()
+            ingredients: checkArray
         };
 
-        axios.post('http://localhost:4000/api/checkbox-save', checkData)
+        console.log(checkArray);
+
+        axios.post('http://localhost:8000/testing', checkArray)
             .then((res) => {
                 console.log(res.data)
                 
@@ -142,11 +144,11 @@ class Search extends Component {
                                     <div className = "form-check">
                                         <label className = "form-check-label">
                                             <input type = "checkbox"
-                                                checked = {this.state.egg}
-                                                onChange = {this.onChangeEgg}
+                                                checked = {this.state.eggs}
+                                                onChange = {this.onChangeEggs}
                                                 className = "form-check-input"
                                             />
-                                            Egg
+                                            Eggs
                                         </label>
                                     </div>
                                 </Col>

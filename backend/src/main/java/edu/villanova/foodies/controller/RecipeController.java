@@ -71,7 +71,7 @@ public class RecipeController {
         return recipeRepository.save(recipe);
     }
 
-    @GetMapping("/testing")
+    @PostMapping("/testing")
     public List<Recipe> findAllRecipeWithIngredients(@RequestBody List<String> ingredients){
         return recipeRepository.findAllRecipeWithIngredients(ingredients);
     }
