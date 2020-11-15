@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <Nav>
       <div className="body">
-        <h2 className="logo"><img src={require("../../Images/logo.png")} width="140" alt="Foodies" /> </h2>
+        <h2 className="logo"><a href = "http://localhost:3000/"><img src={require("../../Images/logo.png")} width="140" alt="Foodies" /></a> </h2>
       </div>
       <Burger />
     </Nav>
