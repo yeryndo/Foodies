@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Search extends Component {
@@ -56,6 +55,7 @@ class Search extends Component {
         e.preventDefault();
         console.log("Passed");
 
+        //converting checked values into String
         let checkArray = [];
         for (var key in this.state){
             if(this.state[key] === true){
@@ -64,14 +64,10 @@ class Search extends Component {
         }
 
         let checkData = {
-            checkbox: checkArray.toString()
+            ingredients: checkArray.toString()
         };
 
-        var config = {
-            headers: {'Access-Control-Allow-Origin': '*'}
-        };
-
-        axios.post('http://localhost:8000/all/', checkData, config, { crossdomain: true })
+        axios.post('http://localhost:4000/api/checkbox-save', checkData)
             .then((res) => {
                 console.log(res.data)
                 

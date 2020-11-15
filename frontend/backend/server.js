@@ -25,10 +25,10 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cors());
-app.use('/all', checkboxRoute)
+app.use('/api', checkboxRoute)
 
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })

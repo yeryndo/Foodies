@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         <Container fluid>
             <Row>
                 {recipes.map((recipe, index) => {
-                    return <div id={index} className = "indvCard">
+                    return <div key={index} className = "indvCard">
                         <Card className={classes.root}>
                             <CardHeader
                                 action={
