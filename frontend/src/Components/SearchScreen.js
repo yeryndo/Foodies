@@ -88,13 +88,16 @@ class Search extends Component {
             });
     }
 
-    
+    // sendData = (data) =>{
+    //     form.reset();
+    //     document.getElementById("submission").reset();
+    // }
 
     render () {
         return (
             <Container>
-                <div>
-                    <h2 className = "title">Search For Recipes</h2> 
+                <div id = "submission">
+                    <h2 className = "title">Search For Recipes</h2>
                         <div className = "insideDiv">
                             <form onSubmit = {this.onSubmit}>
                             <h4><u>Protein</u></h4>

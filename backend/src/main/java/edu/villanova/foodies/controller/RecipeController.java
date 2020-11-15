@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import edu.villanova.foodies.model.Recipe;
 import edu.villanova.foodies.repository.RecipeRepository;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
+
+
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -38,6 +42,7 @@ public class RecipeController {
     public ResponseEntity<Recipe> getRecipe(@PathVariable String recipeId) {
         Recipe recipe = recipeRepository.findById(recipeId).get();
         if (recipe != null) {
+            
             return new ResponseEntity<Recipe>(recipe, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND); // gives 500 error right now, and not 404
@@ -58,4 +63,17 @@ public class RecipeController {
     public List<Recipe> getRecipesByCategoryInBreakfast(@PathVariable String category, @PathVariable String meal) {
         return recipeRepository.findRecipeByMealAndCategory(meal, category);
     }
+
+    @PutMapping(value="recipe/{recipeId}")
+    public Recipe putMethodName(@PathVariable String recipeId, @RequestBody List<String> ingredients) {
+        Recipe recipe = recipeRepository.findById(recipeId).get();
+        recipe.setIngredients(ingredients);
+        return recipeRepository.save(recipe);
+    }
+
+    @GetMapping("/testing")
+    public List<Recipe> findAllRecipeWithIngredients(@RequestBody List<String> ingredients){
+        return recipeRepository.findAllRecipeWithIngredients(ingredients);
+    }
+    
 }

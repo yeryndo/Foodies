@@ -1,5 +1,7 @@
 package edu.villanova.foodies.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -17,23 +19,13 @@ public class Recipe {
     private String imageUrl;
     private String detail;
     private String instructions;
-    private String[] ingredients;
+    private List<String> ingredients;
 
     public Recipe() {
     }
 
-    public Recipe(String name, String meal, String category, String detail, String imageUrl, String[] ingredients, String instructions) {
-        this.name = name;
-        this.meal = meal;
-        this.category = category;
-        this.detail = detail;
-        this.imageUrl = imageUrl;
-        this.instructions = instructions;
-        this.ingredients = ingredients;
-    }
-
     public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
-            String imageUrl, String detail, String instructions, String[] ingredients) {
+            String imageUrl, String detail, String instructions, List<String> ingredients) {
         this.name = name;
         this.meal = meal;
         this.calories = calories;
@@ -126,11 +118,12 @@ public class Recipe {
         this.instructions = instructions;
     }
 
-    public String[] getIngredients(String[] ingredients){
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String[] ingredients){
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
+    
 }
