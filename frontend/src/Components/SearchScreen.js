@@ -61,15 +61,6 @@ class Search extends Component {
         }));
     }
 
-    // componentDidMount = () => {
-    //     this.onSubmit();
-    // }
-
-    // handleChange = ({ target }) => {
-    //     const {name, value} = target;
-    //     this.setState({[name]: value});
-    // }
-
     //Submit
     onSubmit = (e) => {
         e.preventDefault();
@@ -88,9 +79,6 @@ class Search extends Component {
                 const data = res.data;
                 this.setState({recipes: data});
                 console.log('Data has been received!');
-                console.log(data[0]);
-                
-
             }).catch((error) => {
                 console.log(error)
                 console.log("Error receiving data");
@@ -98,15 +86,17 @@ class Search extends Component {
     }
 
     displayRecipes = (recipes) => {
-        if (recipes === undefined) return "No recipes with that criteria";
+        if (recipes === null) return "No recipes with that criteria";
 
         return recipes.map((recipe, index) => (
             <div key ={index}>
-                <h3>Selected ingredients:</h3>
+                <h3>Recipe Name:</h3>
                 <p>{recipe.name}</p>
+                <p>{recipe.calories}</p>
             </div>
         ));
     }
+
     render () {
         return (
             <Container>
@@ -228,9 +218,9 @@ class Search extends Component {
                 </div>
 
                 <div>
-                    <h2>Display Recipes</h2>
+                    <h2>Recipes With Selected Ingredients</h2>
                     <div>
-                        {this.displayRecipes(this.state.posts)}
+                        {this.displayRecipes(this.state.recipes)}
                     </div>                
                 </div>
             </Container>
