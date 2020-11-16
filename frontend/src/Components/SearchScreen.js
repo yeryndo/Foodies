@@ -12,10 +12,16 @@ class Search extends Component {
         beef: false,
         rice: false,
         eggs: false,
+        potato: false,
         carrot: false,
         onion: false,
+        pepper: false,
+        mushroom: false,
+        tomato: false,
         ketchup: false,
         salt: false,
+        'olive oil': false,
+        'soy sauce': false,
         recipes: []
     };
 
@@ -50,6 +56,21 @@ class Search extends Component {
             onion: !initialState.onion,
         }));
     }
+    onChangePepper = () => {
+        this.setState(initialState => ({
+            pepper: !initialState.pepper,
+        }));
+    }
+    onChangeMushroom = () => {
+        this.setState(initialState => ({
+            mushroom: !initialState.mushroom,
+        }));
+    }
+    onChangeTomato = () => {
+        this.setState(initialState => ({
+            tomato: !initialState.tomato,
+        }));
+    }
     onChangeKetchup = () => {
         this.setState(initialState => ({
             ketchup: !initialState.ketchup,
@@ -58,6 +79,16 @@ class Search extends Component {
     onChangeSalt = () => {
         this.setState(initialState => ({
             salt: !initialState.salt,
+        }));
+    }
+    onChangeOilveOil = () => {
+        this.setState(initialState => ({
+            'olive oil': !initialState['olive oil'],
+        }));
+    }
+    onChangeSoySauce = () => {
+        this.setState(initialState => ({
+            'soy sauce': !initialState['soy sauce'],
         }));
     }
 
@@ -79,6 +110,7 @@ class Search extends Component {
                 const data = res.data;
                 this.setState({recipes: data});
                 console.log('Data has been received!');
+                
             }).catch((error) => {
                 console.log(error)
                 console.log("Error receiving data");
@@ -92,7 +124,7 @@ class Search extends Component {
             <div key ={index}>
                 <h3>Recipe Name:</h3>
                 <p>{recipe.name}</p>
-                <p>{recipe.calories}</p>
+                <p>{recipe.detail}</p>
             </div>
         ));
     }
@@ -105,7 +137,7 @@ class Search extends Component {
                         <div className = "insideDiv">
                             <form onSubmit = {this.onSubmit}>
                             <h4><u>Protein</u></h4>
-                            <Row>
+                            <Row className = "rowStyling">
                                 <Col>
                                     <div className = "form-check">
                                         <label className = "form-check-label">
@@ -156,7 +188,7 @@ class Search extends Component {
                                 </Col>
                             </Row>
                             <h4><u>Vegetables</u></h4>
-                            <Row>
+                            <Row className = "rowStyling">
                                 <Col>
                                     <div className = "form-check">
                                         <label className = "form-check-label">
@@ -181,9 +213,45 @@ class Search extends Component {
                                         </label>
                                     </div>
                                 </Col>
+                                <Col>
+                                    <div className = "form-check">
+                                        <label className = "form-check-label">
+                                            <input type = "checkbox"
+                                                checked = {this.state.pepper}
+                                                onChange = {this.onChangePepper}
+                                                className = "form-check-input"
+                                            />
+                                            Pepper
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div className = "form-check">
+                                        <label className = "form-check-label">
+                                            <input type = "checkbox"
+                                                checked = {this.state.mushroom}
+                                                onChange = {this.onChangeMushroom}
+                                                className = "form-check-input"
+                                            />
+                                            Mushroom
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div className = "form-check">
+                                        <label className = "form-check-label">
+                                            <input type = "checkbox"
+                                                checked = {this.state.tomato}
+                                                onChange = {this.onChangeTomato}
+                                                className = "form-check-input"
+                                            />
+                                            Tomato
+                                        </label>
+                                    </div>
+                                </Col>
                             </Row>                    
-                            <h4><u>Sauces</u></h4>
-                            <Row>
+                            <h4><u>Condiments</u></h4>
+                            <Row className = "rowStyling">
                                 <Col>
                                     <div className = "form-check">
                                         <label className = "form-check-label">
@@ -208,10 +276,34 @@ class Search extends Component {
                                         </label>
                                     </div>
                                 </Col>
+                                <Col>
+                                    <div className = "form-check">
+                                        <label className = "form-check-label">
+                                            <input type = "checkbox"
+                                                checked = {this.state['olive oil']}
+                                                onChange = {this.onChangeOilveOil}
+                                                className = "form-check-input"
+                                            />
+                                            Olive oil
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div className = "form-check">
+                                        <label className = "form-check-label">
+                                            <input type = "checkbox"
+                                                checked = {this.state['soy sauce']}
+                                                onChange = {this.onChangeSoySauce}
+                                                className = "form-check-input"
+                                            />
+                                            Soy sauce
+                                        </label>
+                                    </div>
+                                </Col>
                             </Row>
 
                             <div className = "form-group">                            
-                                <button className="btn btn-success">Search</button> 
+                                <button className="btn btn-success searchButton float-right">Search for Recipes</button> 
                             </div>
                         </form>
                     </div>                       

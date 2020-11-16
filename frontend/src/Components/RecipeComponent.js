@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx';
@@ -45,16 +46,33 @@ const useStyles = makeStyles((theme) => ({
  
   export default function RecipeCard(props){
       const classes = useStyles();
-      const [expanded, setExpanded] = React.useState(false);
+      const [expandSelected, onPressExpand] = React.useState([]);
       const[recipes, setRecipe] = React.useState([])
       useEffect(() =>{
         RecipeService.getRecipes(props.meal, props.category).then((response) => {
              setRecipe(response.data)
         });
       })
-      const handleExpandClick = () =>{
-          setExpanded(!expanded);
+      const handleExpandClick = (index) =>{
+          let tab = expandSelected;
+          if(tab.includes(index)){
+              tab.splice(tab.indexOf(index), 1);
+          }
+          else{
+              tab.push(index);
+          }
+          onPressExpand(tab);
+ 
       };
+      const setExpanded = (index) =>{
+          let tab = expandSelected;
+          if(tab.includes(index)){
+              return true;
+          }
+          else{
+              return false;
+          }
+      }
  
       return(
         <Container fluid>
@@ -83,16 +101,16 @@ const useStyles = makeStyles((theme) => ({
                             <CardActions disableSpacing>
                                 <IconButton
                                     className={clsx(classes.expand, {
-                                        [classes.expandOpen]: expanded,
+                                        [classes.expandOpen]: setExpanded(index),
                                     })}
-                                    onClick={handleExpandClick}
-                                    aria-expanded={expanded}
+                                    onClick={() => handleExpandClick(index)}
+                                    aria-expanded={setExpanded(index)}
                                     aria-label="show more"
                                 >
                                     <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
-                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                            <Collapse in={setExpanded(index)} timeout="auto" unmountOnExit>
                                 <CardContent>
                                     <Typography paragraph>Instructions:</Typography>
                                     <Typography paragraph>{recipe.instructions}</Typography>              
@@ -105,3 +123,5 @@ const useStyles = makeStyles((theme) => ({
         </Container>
       )
   }
+ 
+
