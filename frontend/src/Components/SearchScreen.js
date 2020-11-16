@@ -86,7 +86,7 @@ class Search extends Component {
     }
 
     displayRecipes = (recipes) => {
-        if (recipes === null) return "No recipes with that criteria";
+        if (recipes.length === 0) return "No recipes with that criteria"; 
 
         return recipes.map((recipe, index) => (
             <div key ={index}>
