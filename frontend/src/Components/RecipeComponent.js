@@ -66,11 +66,13 @@ const useStyles = makeStyles((theme) => ({
       };
       const setExpanded = (index) =>{
           let tab = expandSelected;
+          let boolResult = false;
           if(tab.includes(index)){
-              return true;
+              boolResult = true;
+              return boolResult;
           }
           else{
-              return false;
+              return boolResult;
           }
       }
  
