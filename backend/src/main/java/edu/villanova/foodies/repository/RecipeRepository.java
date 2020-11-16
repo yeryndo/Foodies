@@ -14,6 +14,6 @@ public interface RecipeRepository extends MongoRepository<Recipe, String> {
     @Query("{'meal' : ?0, 'category' : ?1}")
     public List<Recipe> findRecipeByMealAndCategory(String meal, String category);
 
-    @Query("{'ingredients' : ?0}")
+    @Query("{'ingredients' : {$all:?0}}")
     public List<Recipe> findAllRecipeWithIngredients(List<String> ingredients);
 }

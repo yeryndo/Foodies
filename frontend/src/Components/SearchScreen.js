@@ -15,7 +15,8 @@ class Search extends Component {
         carrot: false,
         onion: false,
         ketchup: false,
-        salt: false
+        salt: false,
+        recipes: []
     };
 
     //React checkboxes onChange methods
@@ -60,41 +61,52 @@ class Search extends Component {
         }));
     }
 
-    
+    // componentDidMount = () => {
+    //     this.onSubmit();
+    // }
+
+    // handleChange = ({ target }) => {
+    //     const {name, value} = target;
+    //     this.setState({[name]: value});
+    // }
 
     //Submit
     onSubmit = (e) => {
         e.preventDefault();
         console.log("Passed");
 
-        //converting checked values into String
         let checkArray = [];
         for (var key in this.state){
             if(this.state[key] === true){
                 checkArray.push(key);
             }
         }
-
-        let checkData = {
-            ingredients: checkArray
-        };
-
         console.log(checkArray);
-
-        axios.post('http://localhost:8000/testing', checkArray)
+        axios.post('http://localhost:8000/getRecipes', checkArray)
             .then((res) => {
                 console.log(res.data)
+                const data = res.data;
+                this.setState({recipes: data});
+                console.log('Data has been received!');
+                console.log(data[0]);
                 
+
             }).catch((error) => {
                 console.log(error)
+                console.log("Error receiving data");
             });
     }
 
-    // sendData = (data) =>{
-    //     form.reset();
-    //     document.getElementById("submission").reset();
-    // }
+    displayRecipes = (recipes) => {
+        if (recipes === undefined) return "No recipes with that criteria";
 
+        return recipes.map((recipe, index) => (
+            <div key ={index}>
+                <h3>Selected ingredients:</h3>
+                <p>{recipe.name}</p>
+            </div>
+        ));
+    }
     render () {
         return (
             <Container>
@@ -210,12 +222,19 @@ class Search extends Component {
 
                             <div className = "form-group">                            
                                 <button className="btn btn-success">Search</button> 
-                                {/* onClick={window.location.href='/display'} Add to button but also need to clear event handling   */}
                             </div>
                         </form>
                     </div>                       
                 </div>
+
+                <div>
+                    <h2>Display Recipes</h2>
+                    <div>
+                        {this.displayRecipes(this.state.posts)}
+                    </div>                
+                </div>
             </Container>
+            
             
         )
     }
