@@ -23,7 +23,7 @@ public class Recipe {
 
     public Recipe() {
     }
-
+    
     public Recipe(String name, String meal, int calories, int servingSize, int estimateTime, String category,
             String imageUrl, String detail, String instructions, List<String> ingredients) {
         this.name = name;

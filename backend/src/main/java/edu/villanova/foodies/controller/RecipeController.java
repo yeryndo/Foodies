@@ -49,7 +49,7 @@ public class RecipeController {
     }
 
     @PostMapping(value = "recipe/createRecipe")
-    public Recipe addNewRecipe(@PathVariable Recipe recipe) {
+    public Recipe addNewRecipe(@RequestBody Recipe recipe) {
         return recipeRepository.save(recipe);
     }
 
