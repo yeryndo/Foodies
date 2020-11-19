@@ -12,7 +12,7 @@ function BrowniesScreen() {
           height: 2
         }}
       />
-      <RecipeComponent meal ="dessert" category="brownie"/>
+      <RecipeComponent meal ="dessert" category="brownies"/>
     </div>
   );
 }

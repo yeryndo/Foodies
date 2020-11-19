@@ -12,7 +12,7 @@ function CookieScreen() {
           height: 2
         }}
       />
-      <RecipeComponent meal ="dessert" category="cookie"/>
+      <RecipeComponent meal ="dessert" category="cookies"/>
     </div>
   );
 }
