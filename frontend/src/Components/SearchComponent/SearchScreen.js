@@ -42,7 +42,6 @@ class Search extends Component {
         'soy sauce': false,
         cheese: false,
         garlic: false,
-        potato: false,
         recipes: [],
     };
     
@@ -146,7 +145,6 @@ class Search extends Component {
             'olive oil': false,
             'soy sauce': false,
             cheese: false,
-            potato: false,
             garlic: false
         });
     }
