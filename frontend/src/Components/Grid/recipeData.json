@@ -7,19 +7,19 @@
   },
   {
     "id": 2,
-    "title": "Pizza",
+    "title": "Fresh Basil Pizza",
     "text": "This is a recipe for a nice pizza that you can eat for lunch or dinner. It has peppers and basil leaves. Leaves a clean taste!",
     "imageSource": "../Images/pizza.jpg"
   },
   {
     "id": 3,
-    "title": "Shrimp Pasta",
+    "title": "Shrimp Scampi Pasta",
     "text": "An easy peasy pasta dish that’s simple, flavorful and incredibly hearty. And all you need is 20 min to whip this up!",
     "imageSource": "../Images/pasta.jpg"
   },
   {
     "id": 4,
-    "title": "Steak",
+    "title": "Steak Mock Frites",
     "text": "Easy Steak Frites that will not disappoint any guest.",
     "imageSource": "../Images/steak.jpg"
   },

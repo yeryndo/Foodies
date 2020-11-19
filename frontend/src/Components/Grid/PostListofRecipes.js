@@ -22,6 +22,13 @@ class PostListofRecipes extends Component {
                                             <Card.Img variant="top" src={postDetail.imageSource} />
                                             <Card.Body>
                                                 <Card.Title>{postDetail.title}</Card.Title>
+                                                <hr 
+                                                    style={{
+                                                    color: '#E1B067',
+                                                    backgroundColor: '#E1B067',
+                                                    height: 1
+                                                    }}
+                                                />
                                                     <Card.Text>
                                                         {postDetail.text}
                                                     </Card.Text>                        
