@@ -42,6 +42,7 @@ class Search extends Component {
         'soy sauce': false,
         cheese: false,
         garlic: false,
+        potato: false,
         recipes: [],
     };
     
@@ -74,6 +75,11 @@ class Search extends Component {
         if(ingredient === "onion"){
             this.setState(initialState => ({
                 onion: !initialState.onion,
+            }));
+        }
+        if(ingredient === "potato"){
+            this.setState(initialState => ({
+                potato: !initialState.potato,
             }));
         }
         if(ingredient === "pepper"){
@@ -140,6 +146,7 @@ class Search extends Component {
             'olive oil': false,
             'soy sauce': false,
             cheese: false,
+            potato: false,
             garlic: false
         });
     }
@@ -216,6 +223,7 @@ class Search extends Component {
                                     <CheckBox ingredient="carrot" checked ={this.state.carrot}  onChangeIngredient={() => {this.onChangeIngredient("carrot")}}/>
                                     <CheckBox ingredient="onion" checked ={this.state.onion}  onChangeIngredient={() => {this.onChangeIngredient("onion")}}/>
                                     <CheckBox ingredient="pepper" checked ={this.state.pepper}  onChangeIngredient={() => {this.onChangeIngredient("pepper")}}/>
+                                    <CheckBox ingredient="potato" checked ={this.state.potato}  onChangeIngredient={() => {this.onChangeIngredient("potato")}}/>
                                     <CheckBox ingredient="mushroom" checked ={this.state.mushroom}  onChangeIngredient={() => {this.onChangeIngredient("mushroom")}}/>
                                 </Row>
  
