@@ -9,6 +9,20 @@ import Col from 'react-bootstrap/Col';
 import './SearchScreen.css';
 import CheckBox from './CheckBoxComponent'
 import DisplaySearched from "./DisplaySearched";
+import RecipeComponent from "../RecipeComponent"
+import { makeStyles } from '@material-ui/core/styles'
+import clsx from 'clsx';
+import CardHeader from '@material-ui/core/CardHeader'
+import CardMedia from '@material-ui/core/CardMedia'
+import CardContent from '@material-ui/core/CardContent'
+import CardActions from '@material-ui/core/CardActions'
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton'
+import Typography from '@material-ui/core/Typography';
+import {red} from '@material-ui/core/colors';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MoreVertIcon from '@material-ui/icons/MoreVert'
+ 
 class Search extends Component {
     //Initial checkbox state
     state = {
@@ -26,9 +40,11 @@ class Search extends Component {
         salt: false,
         'olive oil': false,
         'soy sauce': false,
+        cheese: false,
+        garlic: false,
         recipes: [],
     };
- 
+    
     onChangeIngredient = (ingredient) =>{
         if(ingredient === "chicken"){
             this.setState(initialState => ({
@@ -85,6 +101,16 @@ class Search extends Component {
                 salt: !initialState.salt,
             }));
         }
+        if(ingredient === "cheese"){
+            this.setState(initialState => ({
+                cheese: !initialState.cheese,
+            }));
+        }
+        if(ingredient === "garlic"){
+            this.setState(initialState => ({
+                garlic: !initialState.garlic,
+            }));
+        }
         if(ingredient === "olive oil"){
             this.setState(initialState => ({
                 'olive oil': !initialState['olive oil'],
@@ -113,10 +139,10 @@ class Search extends Component {
             salt: false,
             'olive oil': false,
             'soy sauce': false,
-        }
-        );
+            cheese: false,
+            garlic: false
+        });
     }
- 
     onSubmit = (e) => {
         e.preventDefault();
         console.log("Passed");
@@ -145,23 +171,25 @@ class Search extends Component {
     }
  
     displayRecipes = (recipes) => {
-        if (recipes.length === 0) return "No recipes with that criteria"; 
+        if (recipes.length === 0) return(
+            <div>
+                <p style={{ paddingLeft: 40 }}>Sorry! There are no recipes with those ingredients...</p> 
+            </div>
+        ) 
  
         return(
-        <div>
-            <DisplaySearched recipes={recipes} />
-        </div>
-        )
+            <div>
+                <DisplaySearched recipes={recipes} />
+            </div>
            
-        
-        
+        )
     }
  
     render () {
         return (
             <div>
                 <Container fluid="md" >
-                    <div id = "submission" className="background">
+                    <div id = "submission" className="sectionTitle">
                         <div>
                             <h2>Search For Recipes</h2>
                             <hr 
@@ -174,7 +202,7 @@ class Search extends Component {
                         </div>
                         
                         <div >
-                            <form onSubmit = {this.onSubmit}>
+                            <form className = "formStyling" onSubmit = {this.onSubmit}>
                                 <h4><u>Protein</u></h4>
                                 <Row className = "rowStyling">
                                     <CheckBox ingredient="chicken" checked ={this.state.chicken}  onChangeIngredient={() => {this.onChangeIngredient("chicken")}}/>
@@ -189,7 +217,6 @@ class Search extends Component {
                                     <CheckBox ingredient="onion" checked ={this.state.onion}  onChangeIngredient={() => {this.onChangeIngredient("onion")}}/>
                                     <CheckBox ingredient="pepper" checked ={this.state.pepper}  onChangeIngredient={() => {this.onChangeIngredient("pepper")}}/>
                                     <CheckBox ingredient="mushroom" checked ={this.state.mushroom}  onChangeIngredient={() => {this.onChangeIngredient("mushroom")}}/>
-                                    <CheckBox ingredient="tomato" checked ={this.state.tomato}  onChangeIngredient={() => {this.onChangeIngredient("tomato")}}/>
                                 </Row>
  
                                 <h4><u>Condiments</u></h4>
@@ -199,16 +226,26 @@ class Search extends Component {
                                     <CheckBox ingredient="olive oil" checked ={this.state['olive oil']}  onChangeIngredient={() => {this.onChangeIngredient("olive oil")}}/>
                                     <CheckBox ingredient="soy sauce" checked ={this.state['soy sauce']}  onChangeIngredient={() => {this.onChangeIngredient("soy sauce")}}/>
                                 </Row>
- 
+
+                                <h4><u>Additional</u></h4>
+                                <Row className = "rowStyling">
+                                    <CheckBox ingredient="tomato" checked ={this.state.tomato}  onChangeIngredient={() => {this.onChangeIngredient("tomato")}}/>
+                                    <CheckBox ingredient="cheese" checked ={this.state.cheese}  onChangeIngredient={() => {this.onChangeIngredient("cheese")}}/>
+                                    <CheckBox ingredient="garlic" checked ={this.state.garlic}  onChangeIngredient={() => {this.onChangeIngredient("garlic")}}/>
+                                </Row>
+                                
+                                <div className="extraSpace"></div>
                                 <div className = "form-group">                            
                                     <button className="btn btn-success searchButton float-right" onClick={()=>setTimeout(() => {this.resetSearch()},100)}>Search for Recipes</button> 
                                 </div>
+
+                                
                             </form>
                         </div>                       
                     </div>
         
                     <div>
-                        <h2>Recipes With Selected Ingredients</h2>
+                        <h2 style={{ paddingTop: 30 }}>Recipes With Selected Ingredients</h2>
                         <hr 
                                 style={{
                                     color: '#E1B067',
@@ -218,11 +255,13 @@ class Search extends Component {
                             />
                 
                     </div>
+
+                    <div className="insideDiv">
+                        {this.displayRecipes(this.state.recipes)}
+                    </div>
                 </Container>
  
-                <div className="insideDiv">
-                    {this.displayRecipes(this.state.recipes)}
-                </div>   
+                  
             </div>
     
         )

@@ -45,28 +45,42 @@ const useStyles = makeStyles((theme) => ({
       const classes = useStyles();
       const [expandSelected, onPressExpand] = React.useState([]);
      
+      
       const handleExpandClick = (index) =>{
-          let tab = expandSelected;
-          if(tab.includes(index)){
-              tab.splice(tab.indexOf(index), 1);
-          }
-          else{
-              tab.push(index);
-          }
-          onPressExpand(tab);
- 
+        let tab = expandSelected;
+        if(tab.includes(index)){
+          tab.splice(tab.indexOf(index), 1);
+        }
+        else{
+          tab.push(index);
+        }
+        onPressExpand(tab);
+
       };
+      
       const setExpanded = (index) =>{
-          let tab = expandSelected;
-          if(tab.includes(index)){
-              return true;
-          }
-          else{
-              return false;
-          }
+        let determiner = true;
+        if(expandSelected.includes(index)){
+            determiner = true;
+        }
+        else{
+            determiner = false;
+        }
+        return determiner;
+      }
+
+
+      const splitInstruction = (instruction) =>{
+        let recipeInstruction = instruction;
+
+        let seperateInstruction = recipeInstruction
+
+        return seperateInstruction;
+
+
       }
  
-      return(
+    return(
         <Container fluid>
             <Row>
                 {props.recipes.map((recipe, index) => {
@@ -93,18 +107,28 @@ const useStyles = makeStyles((theme) => ({
                             <CardActions disableSpacing>
                                 <IconButton
                                     className={clsx(classes.expand, {
-                                        [classes.expandOpen]: setExpanded(index),
+                                        [classes.expandOpen]: true,
                                     })}
-                                    onClick={() => handleExpandClick(index)}
-                                    aria-expanded={setExpanded(index)}
+                                    onClick={() => {console.log(expandSelected); handleExpandClick(index); }}
+                                    aria-expanded={true}
                                     aria-label="show more"
                                 >
                                     <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
-                            <Collapse in={setExpanded(index)} timeout="auto" unmountOnExit>
+                            <Collapse in={true} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    <Typography paragraph>Instructions:</Typography>
+                                <Typography paragraph><b>Instructions:</b></Typography>
+                                    <hr 
+                                    style={{
+                                        color: '#E1B067',
+                                        backgroundColor: '#E1B067',
+                                        height: 2
+                                    }}
+                                    />
+                                    <Typography style={{marginLeft: 115}}><b>Estimated Time:</b> {recipe.estimateTime} mins</Typography> 
+                                    <Typography style={{marginLeft: 185}}><b>Serving Size:</b> {recipe.servingSize} </Typography>
+                                    <Typography style={{marginLeft: 201}} paragraph><b>Calories: </b>{recipe.calories}</Typography>
                                     <Typography paragraph>{recipe.instructions}</Typography>              
                                 </CardContent>
                             </Collapse>
@@ -113,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
             })}
             </Row>
         </Container>
-      )
-  }
+    )
+}
  
 

@@ -20,7 +20,7 @@ function DietaryfastScreen() {
                     height="270"
                   />
                 </Link>
-                <h3 className="title">{iconDetail.title}</h3>
+                <h3 style={{marginLeft: 62}} className="title">{iconDetail.title}</h3>
               </div>
             );
           })}

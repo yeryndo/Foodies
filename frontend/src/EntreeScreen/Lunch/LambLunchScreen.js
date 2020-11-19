@@ -4,7 +4,14 @@ import RecipeComponent from "../../Components/RecipeComponent";
 function LambLunchScreen() {
   return (
     <div>
-      <h2 style={{ padding: 30 }}>List of Lamb Recipes for Lunch</h2>
+      <h2 style={{ marginTop: 20, marginLeft: 35 }}>List of Lamb Recipes for Lunch</h2>
+      <hr 
+        style={{
+          color: '#E1B067',
+          backgroundColor: '#E1B067',
+          height: 2
+        }}
+      />
       <RecipeComponent meal ="lunch" category="lamb"/>
     </div>
   );

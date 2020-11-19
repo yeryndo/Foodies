@@ -4,7 +4,14 @@ import RecipeComponent from "../../Components/RecipeComponent";
 function CookieScreen() {
   return (
     <div>
-      <h2 style={{ padding: 30 }}>List of Cookie Recipes for Dessert</h2>
+      <h2 style={{ marginTop: 20, marginLeft: 35 }}>List of Cookie Recipes for Dessert</h2>
+      <hr 
+        style={{
+          color: '#E1B067',
+          backgroundColor: '#E1B067',
+          height: 2
+        }}
+      />
       <RecipeComponent meal ="dessert" category="cookie"/>
     </div>
   );

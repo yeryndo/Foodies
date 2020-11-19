@@ -41,39 +41,40 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
       backgroundColor: red[500],
     },
-  }));
+}));
  
-  export default function RecipeCard(props){
-      const classes = useStyles();
-      const [expandSelected, onPressExpand] = React.useState([]);
-      const[recipes, setRecipe] = React.useState([])
-      useEffect(() =>{
+export default function RecipeCard(props){
+    const classes = useStyles();
+    const [expandSelected, onPressExpand] = React.useState([]);
+    const[recipes, setRecipe] = React.useState([])
+    useEffect(() =>{
         RecipeService.getRecipes(props.meal, props.category).then((response) => {
-             setRecipe(response.data)
+            setRecipe(response.data)
         });
-      })
-      const handleExpandClick = (index) =>{
-          let tab = expandSelected;
-          if(tab.includes(index)){
-              tab.splice(tab.indexOf(index), 1);
-          }
-          else{
-              tab.push(index);
-          }
-          onPressExpand(tab);
+    })
+    const handleExpandClick = (index) =>{
+        let tab = expandSelected;
+        if(tab.includes(index)){
+            tab.splice(tab.indexOf(index), 1);
+        }
+        else{
+            tab.push(index);
+        }
+        onPressExpand(tab);
  
-      };
-      const setExpanded = (index) =>{
-          let tab = expandSelected;
-          if(tab.includes(index)){
-              return true;
-          }
-          else{
-              return false;
-          }
-      }
+    };
+    
+    const setExpanded = (index) =>{
+        let tab = expandSelected;
+        if(tab.includes(index)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
  
-      return(
+    return(
         <Container fluid>
             <Row>
                 {recipes.map((recipe, index) => {
@@ -111,8 +112,19 @@ const useStyles = makeStyles((theme) => ({
                             </CardActions>
                             <Collapse in={setExpanded(index)} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    <Typography paragraph>Instructions:</Typography>
-                                    <Typography paragraph>{recipe.instructions}</Typography>              
+                                    <Typography paragraph><b>Instructions:</b></Typography>
+                                    <hr 
+                                    style={{
+                                        color: '#E1B067',
+                                        backgroundColor: '#E1B067',
+                                        height: 2
+                                    }}
+                                    />
+                                    <Typography style={{marginLeft: 250}}><b>Estimated Time:</b> {recipe.estimateTime} mins</Typography> 
+                                    <Typography style={{marginLeft: 320}}><b>Serving Size:</b> {recipe.servingSize} </Typography>
+                                    <Typography style={{marginLeft: 336}} paragraph><b>Calories: </b>{recipe.calories}</Typography>
+                                    <Typography paragraph>{recipe.instructions}</Typography>
+                                                
                                 </CardContent>
                             </Collapse>
                         </Card>
@@ -120,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
             })}
             </Row>
         </Container>
-      )
-  }
+    )
+}
  
 

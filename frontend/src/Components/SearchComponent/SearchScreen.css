@@ -1,14 +1,24 @@
 h4 {
-    padding-top: 15px;
-    padding-bottom: 5px;
-  }
-  .insideDiv {
-    flex: 1;
-    flex-direction: row;
-  }
-  .searchButton {
-    text-align: end;
-  }
-  .background {
-  }
-  
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.insideDiv {
+  flex: 1;
+  flex-direction: row;
+}
+.searchButton {
+  text-align: end;
+}
+.background {
+  margin-top: 0px;
+}
+.sectionTitle {
+  margin-top: 25px;
+}
+.extraSpace{
+  padding: 15px;
+}
+.formStyling{
+  padding: 10px;
+  /* padding-left: 10px; */
+}  
