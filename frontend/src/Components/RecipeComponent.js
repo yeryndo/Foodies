@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx';
@@ -66,13 +65,11 @@ const useStyles = makeStyles((theme) => ({
       };
       const setExpanded = (index) =>{
           let tab = expandSelected;
-          let boolResult = false;
           if(tab.includes(index)){
-              boolResult = true;
-              return boolResult;
+              return true;
           }
           else{
-              return boolResult;
+              return false;
           }
       }
  

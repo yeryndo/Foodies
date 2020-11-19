@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import HomeScreen from "./Screens/HomeScreen";
-import SearchScreen from "./SearchScreen";
+import SearchScreen from "./SearchComponent/SearchScreen";
 
 import BreakfastScreen from "./Screens/BreakfastScreen";
 import LunchScreen from "./Screens/LunchScreen";

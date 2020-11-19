@@ -1,0 +1,14 @@
+h4 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  .insideDiv {
+    flex: 1;
+    flex-direction: row;
+  }
+  .searchButton {
+    text-align: end;
+  }
+  .background {
+  }
+  
