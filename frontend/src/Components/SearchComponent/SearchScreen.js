@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './SearchScreen.css';
 import CheckBox from './CheckBoxComponent'
-import RecipeComponent from "../../Components/RecipeComponent";
+import DisplaySearched from "./DisplaySearched";
 class Search extends Component {
     //Initial checkbox state
     state = {
@@ -32,62 +35,62 @@ class Search extends Component {
                 chicken: !initialState.chicken,
             }));
         }
-        else if(ingredient === "beef"){
+        if(ingredient === "beef"){
             this.setState(initialState => ({
                 beef: !initialState.beef,
             }));
         }
-        else if(ingredient === "rice"){
+        if(ingredient === "rice"){
             this.setState(initialState => ({
                 rice: !initialState.rice,
             }));
         }
-        else if(ingredient === "eggs"){
+        if(ingredient === "eggs"){
             this.setState(initialState => ({
                 eggs: !initialState.eggs,
             }));
         }
-        else if(ingredient === "carrot"){
+        if(ingredient === "carrot"){
             this.setState(initialState => ({
                 carrot: !initialState.carrot,
             }));
         }
-        else if(ingredient === "onion"){
+        if(ingredient === "onion"){
             this.setState(initialState => ({
                 onion: !initialState.onion,
             }));
         }
-        else if(ingredient === "pepper"){
+        if(ingredient === "pepper"){
             this.setState(initialState => ({
                 pepper: !initialState.pepper,
             }));
         }
-        else if(ingredient === "mushroom"){
+        if(ingredient === "mushroom"){
             this.setState(initialState => ({
                 mushroom: !initialState.mushroom,
             }));
         }
-        else if(ingredient === "tomato"){
+        if(ingredient === "tomato"){
             this.setState(initialState => ({
                 tomato: !initialState.tomato,
             }));
         }
-        else if(ingredient === "ketchup"){
+        if(ingredient === "ketchup"){
             this.setState(initialState => ({
                 ketchup: !initialState.ketchup,
             }));
         }
-        else if(ingredient === "salt"){
+        if(ingredient === "salt"){
             this.setState(initialState => ({
                 salt: !initialState.salt,
             }));
         }
-        else if(ingredient === "olive oil"){
+        if(ingredient === "olive oil"){
             this.setState(initialState => ({
                 'olive oil': !initialState['olive oil'],
             }));
         }
-        else if(ingredient === "soy sauce"){
+        if(ingredient === "soy sauce"){
             this.setState(initialState => ({
                 'soy sauce': !initialState['soy sauce'],
             }));
@@ -127,6 +130,9 @@ class Search extends Component {
         console.log(checkArray);
         axios.post('http://localhost:8000/getRecipes', checkArray)
             .then((res) => {
+                console.log('checkarray:');
+                console.log(checkArray);
+                console.log('res.data:');
                 console.log(res.data)
                 const data = res.data;
                 this.setState({recipes: data});
@@ -141,11 +147,14 @@ class Search extends Component {
     displayRecipes = (recipes) => {
         if (recipes.length === 0) return "No recipes with that criteria"; 
  
-        return recipes.map((recipe, index) =>(
-            <div key={index}>
-                <RecipeComponent meal={recipe.meal} category={recipe.category}/>
-            </div>
-        ));
+        return(
+        <div>
+            <DisplaySearched recipes={recipes} />
+        </div>
+        )
+           
+        
+        
     }
  
     render () {
