@@ -1,3 +1,2 @@
 # senior-project-the-foodies
-senior-project-the-foodies created by GitHub Classroom
-"# Foodies" 
+RESTful web application of recipe searching website using React, Spring Boot, and MongoDB as Senior Project
